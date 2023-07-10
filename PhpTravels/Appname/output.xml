@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230705 18:08:04.293" rpa="false" schemaversion="2">
+<suite id="s1" name="Module" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module">
+<suite id="s1-s1" name="Testcase Flights" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_flights.robot">
+<kw name="Open The Browser" library="testCase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PhpUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230705 18:08:04.607" level="INFO">Opening browser 'Chrome' to base url 'https://phptravels.net/'.</msg>
+<status status="PASS" starttime="20230705 18:08:04.607" endtime="20230705 18:08:17.043"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230705 18:08:17.044" endtime="20230705 18:08:17.171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230705 18:08:22.616" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230705 18:08:22.240" endtime="20230705 18:08:22.616"/>
+</kw>
+<msg timestamp="20230705 18:08:22.632" level="FAIL">Element 'css=h2[class='pb-1']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230705 18:08:17.172" endtime="20230705 18:08:22.632"/>
+</kw>
+<status status="FAIL" starttime="20230705 18:08:04.607" endtime="20230705 18:08:22.632"/>
+</kw>
+<test id="s1-s1-t1" name="Validate Flights In Tablist">
+<status status="FAIL" starttime="20230705 18:08:22.632" endtime="20230705 18:08:22.647">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<kw name="Close Browser Session" library="testCase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230705 18:08:22.651" endtime="20230705 18:08:24.779"/>
+</kw>
+<status status="PASS" starttime="20230705 18:08:22.651" endtime="20230705 18:08:24.779"/>
+</kw>
+<status status="FAIL" starttime="20230705 18:08:04.305" endtime="20230705 18:08:24.779">Suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</suite>
+<suite id="s1-s2" name="Testcase Footer" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_footer.robot">
+<kw name="Open The Browser" library="testCase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PhpUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230705 18:08:24.797" level="INFO">Opening browser 'Chrome' to base url 'https://phptravels.net/'.</msg>
+<status status="PASS" starttime="20230705 18:08:24.797" endtime="20230705 18:08:48.192"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230705 18:08:48.192" endtime="20230705 18:08:48.322"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230705 18:08:53.872" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230705 18:08:53.435" endtime="20230705 18:08:53.872"/>
+</kw>
+<msg timestamp="20230705 18:08:53.873" level="FAIL">Element 'css=h2[class='pb-1']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230705 18:08:48.322" endtime="20230705 18:08:53.873"/>
+</kw>
+<status status="FAIL" starttime="20230705 18:08:24.797" endtime="20230705 18:08:53.873"/>
+</kw>
+<test id="s1-s2-t1" name="Validate Footer Logo">
+<status status="FAIL" starttime="20230705 18:08:53.873" endtime="20230705 18:08:53.873">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t2" name="Validate Footer Contact Us">
+<status status="FAIL" starttime="20230705 18:08:53.879" endtime="20230705 18:08:53.879">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t3" name="Validate Footer Company Section">
+<status status="FAIL" starttime="20230705 18:08:53.881" endtime="20230705 18:08:53.882">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t4" name="Validate Footer Support Section">
+<status status="FAIL" starttime="20230705 18:08:53.884" endtime="20230705 18:08:53.885">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t5" name="Validate Footer Services Section">
+<status status="FAIL" starttime="20230705 18:08:53.887" endtime="20230705 18:08:53.888">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t6" name="Validate Footer Facebook Icon">
+<status status="FAIL" starttime="20230705 18:08:53.889" endtime="20230705 18:08:53.892">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t7" name="Validate Footer Twitter Icon">
+<status status="FAIL" starttime="20230705 18:08:53.894" endtime="20230705 18:08:53.895">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t8" name="Validate Footer Youtube Icon">
+<status status="FAIL" starttime="20230705 18:08:53.897" endtime="20230705 18:08:53.897">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t9" name="Validate Footer Whatsapp Icon">
+<status status="FAIL" starttime="20230705 18:08:53.900" endtime="20230705 18:08:53.902">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t10" name="Validate Footer Instagram Icon">
+<status status="FAIL" starttime="20230705 18:08:53.904" endtime="20230705 18:08:53.904">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t11" name="Validate Footer PHPTRAVELS href">
+<status status="FAIL" starttime="20230705 18:08:53.906" endtime="20230705 18:08:53.906">Parent suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</test>
+<kw name="Close Browser Session" library="testCase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230705 18:08:53.906" endtime="20230705 18:08:56.083"/>
+</kw>
+<status status="PASS" starttime="20230705 18:08:53.906" endtime="20230705 18:08:56.083"/>
+</kw>
+<status status="FAIL" starttime="20230705 18:08:24.783" endtime="20230705 18:08:56.083">Suite setup failed:
+Element 'css=h2[class='pb-1']' not visible after 5 seconds.</status>
+</suite>
+<suite id="s1-s3" name="Testcase Homepage" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_homepage.robot">
+<kw name="Open The Browser" library="testCase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PhpUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230705 18:08:56.103" level="INFO">Opening browser 'Chrome' to base url 'https://phptravels.net/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" starttime="20230705 18:08:57.119" endtime="20230705 18:08:57.119"/>
+</kw>
+<msg timestamp="20230705 18:08:57.119" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20230705 18:08:56.099" endtime="20230705 18:08:57.120"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20230705 18:08:57.120" endtime="20230705 18:08:57.120"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230705 18:08:57.120" endtime="20230705 18:08:57.120"/>
+</kw>
+<status status="FAIL" starttime="20230705 18:08:56.099" endtime="20230705 18:08:57.120"/>
+</kw>
+<test id="s1-s3-t1" name="Validate Logo Of The Phptravels Website">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.120" endtime="20230705 18:08:57.120">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t2" name="Validate Header Section">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.120" endtime="20230705 18:08:57.120">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t3" name="Validate Ghandi Drop-down Option In The Header section">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.126" endtime="20230705 18:08:57.126">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t4" name="Validate English dropdown In The Header Section">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.127" endtime="20230705 18:08:57.127">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t5" name="Validate USD Drop-down In The Header Section">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.127" endtime="20230705 18:08:57.127">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t6" name="Validate Account Drop-down In The Header section">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.127" endtime="20230705 18:08:57.127">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t7" name="Validate Heading">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.127" endtime="20230705 18:08:57.127">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t8" name="Validate Heading 'Top Flight Destinations'">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.127" endtime="20230705 18:08:57.127">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t9" name="Validate Heading 'Featured Hotels'">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.136" endtime="20230705 18:08:57.137">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t10" name="Validate Heading 'Featured Tours'">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.137" endtime="20230705 18:08:57.137">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t11" name="Validate Heading 'Book Your Transfer Today'">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.137" endtime="20230705 18:08:57.137">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t12" name="Validate Heading 'Latest on blogs'">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.137" endtime="20230705 18:08:57.137">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t13" name="Validate Subscribe To See Secret Deals Heading">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:08:57.145" endtime="20230705 18:09:01.217">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t14" name="Validate Top-Up Button">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.217" endtime="20230705 18:09:01.217">Test execution stopped due to a fatal error.</status>
+</test>
+<kw name="Close Browser Session" library="testCase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230705 18:09:01.225" endtime="20230705 18:09:01.225"/>
+</kw>
+<status status="PASS" starttime="20230705 18:09:01.225" endtime="20230705 18:09:01.225"/>
+</kw>
+<status status="FAIL" starttime="20230705 18:08:56.086" endtime="20230705 18:09:01.225">Suite setup failed:
+Execution terminated by signal</status>
+</suite>
+<suite id="s1-s4" name="Testcase Hotels" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_hotels.robot">
+<test id="s1-s4-t1" name="Validate Hotels In Tablist">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.225" endtime="20230705 18:09:01.233">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230705 18:09:01.225" endtime="20230705 18:09:01.233"/>
+</suite>
+<suite id="s1-s5" name="Testcase Navigation" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_navigation.robot">
+<test id="s1-s5-t1" name="Validate View More Button">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.233" endtime="20230705 18:09:01.233">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t2" name="Validate Need Help Box">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.241" endtime="20230705 18:09:01.241">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t3" name="Validate Enter Email Address Box">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.241" endtime="20230705 18:09:01.249">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230705 18:09:01.233" endtime="20230705 18:09:01.250"/>
+</suite>
+<suite id="s1-s6" name="Testcase Tours" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_tours.robot">
+<test id="s1-s6-t1" name="Validate Tours In Tablist">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.250" endtime="20230705 18:09:01.258">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230705 18:09:01.250" endtime="20230705 18:09:01.258"/>
+</suite>
+<suite id="s1-s7" name="Testcase Transfers" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_transfers.robot">
+<test id="s1-s7-t1" name="Validate Transfers In Tablist">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.258" endtime="20230705 18:09:01.258">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230705 18:09:01.258" endtime="20230705 18:09:01.258"/>
+</suite>
+<suite id="s1-s8" name="Testcase Visa" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_visa.robot">
+<test id="s1-s8-t1" name="Validate Visa In Tablist">
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20230705 18:09:01.266" endtime="20230705 18:09:01.266">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" starttime="20230705 18:09:01.266" endtime="20230705 18:09:01.266"/>
+</suite>
+<status status="FAIL" starttime="20230705 18:08:04.296" endtime="20230705 18:09:01.274"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="33" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="12" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat pass="0" fail="33" skip="0" id="s1" name="Module">Module</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase Flights">Module.Testcase Flights</stat>
+<stat pass="0" fail="11" skip="0" id="s1-s2" name="Testcase Footer">Module.Testcase Footer</stat>
+<stat pass="0" fail="14" skip="0" id="s1-s3" name="Testcase Homepage">Module.Testcase Homepage</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s4" name="Testcase Hotels">Module.Testcase Hotels</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s5" name="Testcase Navigation">Module.Testcase Navigation</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s6" name="Testcase Tours">Module.Testcase Tours</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s7" name="Testcase Transfers">Module.Testcase Transfers</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s8" name="Testcase Visa">Module.Testcase Visa</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230705 18:08:57.119" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>
