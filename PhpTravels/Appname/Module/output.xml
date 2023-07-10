@@ -1,0 +1,4166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.0 on win32)" generated="20230516 16:16:46.696" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcase Phptravels" source="C:\Users\158410\OneDrive - Arrow Electronics, Inc\Desktop\RobotFramework\PhpTravels\Appname\Module\testcase_phptravels.robot">
+<kw name="Open The Browser" library="testCase_common_keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PhpUrl}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230516 16:16:46.868" level="INFO">Opening browser 'Chrome' to base url 'https://phptravels.net/'.</msg>
+<status status="PASS" starttime="20230516 16:16:46.868" endtime="20230516 16:16:50.820"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230516 16:16:50.820" endtime="20230516 16:16:50.938"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:50.939" endtime="20230516 16:16:50.971"/>
+</kw>
+<status status="PASS" starttime="20230516 16:16:46.867" endtime="20230516 16:16:50.971"/>
+</kw>
+<test id="s1-t1" name="Validate Logo Of The Phptravels Website">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:50.972" endtime="20230516 16:16:50.995"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" starttime="20230516 16:16:50.995" endtime="20230516 16:16:51.003"/>
+</kw>
+<status status="PASS" starttime="20230516 16:16:50.971" endtime="20230516 16:16:51.003"/>
+</test>
+<test id="s1-t2" name="Validate Heading">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:51.004" endtime="20230516 16:16:51.016"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<arg>${Heading1}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:16:51.017" level="INFO">Verifying element 'css=h2[class='pb-1']' contains exact text 'Let’s book your next trip!'.</msg>
+<status status="PASS" starttime="20230516 16:16:51.016" endtime="20230516 16:16:51.034"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${title}</var>
+<arg>${PhpMainHeading}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:51.051" level="INFO">${title} = Let’s book your next trip!</msg>
+<status status="PASS" starttime="20230516 16:16:51.034" endtime="20230516 16:16:51.051"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230516 16:16:51.052" level="INFO">Let’s book your next trip!</msg>
+<status status="PASS" starttime="20230516 16:16:51.051" endtime="20230516 16:16:51.052"/>
+</kw>
+<status status="PASS" starttime="20230516 16:16:51.004" endtime="20230516 16:16:51.052"/>
+</test>
+<test id="s1-t3" name="Validate Hotels In Tablist">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230516 16:16:51.053" endtime="20230516 16:16:51.055"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BodyHotelsText}</arg>
+<arg>${Hotels}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:16:51.055" level="INFO">Verifying element '//span[@class='text']' contains exact text 'Hotels'.</msg>
+<status status="PASS" starttime="20230516 16:16:51.055" endtime="20230516 16:16:51.192"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsSearch}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:51.194" endtime="20230516 16:16:51.235"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickHotels}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:51.238" level="INFO">Clicking element '//span[@id='select2-hotels_city-container']'.</msg>
+<status status="PASS" starttime="20230516 16:16:51.237" endtime="20230516 16:16:51.322"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${InputHotels}</arg>
+<arg>${SourceLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:51.326" level="INFO">Typing text 'Ahmedabad' into text field 'css=input[class='select2-search__field']'.</msg>
+<status status="PASS" starttime="20230516 16:16:51.324" endtime="20230516 16:16:51.433"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsFlagIn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:51.434" endtime="20230516 16:16:55.374"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsFlagIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:55.375" level="INFO">Clicking element 'css=i[class='flag in']'.</msg>
+<status status="PASS" starttime="20230516 16:16:55.374" endtime="20230516 16:16:55.420"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsCheckin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:55.422" level="INFO">Clicking element 'css=input[id='checkin']'.</msg>
+<status status="PASS" starttime="20230516 16:16:55.422" endtime="20230516 16:16:55.478"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,90)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:16:55.478" level="INFO">Executing JavaScript:
+window.scrollTo(0,90)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:16:55.478" endtime="20230516 16:16:55.486"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:16:56.496" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230516 16:16:55.487" endtime="20230516 16:16:56.496"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsCheckinDate}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:56.496" endtime="20230516 16:16:56.524"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsCheckinDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:56.525" level="INFO">Clicking element '(//td[text()='31'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:16:56.524" endtime="20230516 16:16:56.568"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsCheckoutDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:56.569" level="INFO">Clicking element '(//td[text()='22'])[2]'.</msg>
+<status status="PASS" starttime="20230516 16:16:56.568" endtime="20230516 16:16:56.610"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsTravellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:56.611" level="INFO">Clicking element '(//a[@class='dropdown-toggle dropdown-btn travellers waves-effect'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:16:56.611" endtime="20230516 16:16:56.664"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsTravellersPlus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:56.666" endtime="20230516 16:16:56.912"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsTravellersPlus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:56.913" level="INFO">Clicking element '(//i[@class='la la-plus'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:16:56.913" endtime="20230516 16:16:56.975"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsSearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:16:56.976" level="INFO">Clicking element '(//div[@class='btn-search text-center'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:16:56.975" endtime="20230516 16:16:58.791"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsAfterSearchPage}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:16:58.791" endtime="20230516 16:16:59.090"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230516 16:16:59.091" endtime="20230516 16:17:00.977"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:00.977" endtime="20230516 16:17:01.000"/>
+</kw>
+<status status="PASS" starttime="20230516 16:16:51.053" endtime="20230516 16:17:01.000"/>
+</test>
+<test id="s1-t4" name="Validate Flights In Tablist">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BodyFlightsText}</arg>
+<arg>${Flights}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:01.002" level="INFO">Verifying element '(//span[@class='text'])[2]' contains exact text 'Flights'.</msg>
+<status status="PASS" starttime="20230516 16:17:01.001" endtime="20230516 16:17:01.025"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickFlights}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:01.026" level="INFO">Clicking element '(//span[@class='d-none d-lg-block d-xl-block'])[2]'.</msg>
+<status status="PASS" starttime="20230516 16:17:01.025" endtime="20230516 16:17:01.378"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsRoundTrip}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:01.380" level="INFO">Clicking element '//input[@id='round-trip']'.</msg>
+<status status="PASS" starttime="20230516 16:17:01.379" endtime="20230516 16:17:01.481"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsInputFlyingFrom}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:01.484" level="INFO">Clicking element '(//input[@placeholder='Flying From'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:01.483" endtime="20230516 16:17:01.569"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FlightsInputFlyingFrom}</arg>
+<arg>${SourceLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:01.570" level="INFO">Typing text 'Ahmedabad' into text field '(//input[@placeholder='Flying From'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:01.569" endtime="20230516 16:17:01.989"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsSourceWaitElementVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:01.990" endtime="20230516 16:17:02.025"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsSourceWaitElementVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:02.026" level="INFO">Clicking element '//div[text()='Ahmedabad, India']'.</msg>
+<status status="PASS" starttime="20230516 16:17:02.025" endtime="20230516 16:17:02.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsInputDestination}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:02.104" level="INFO">Clicking element '(//input[@placeholder='To Destination'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:02.102" endtime="20230516 16:17:02.205"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FlightsInputDestination}</arg>
+<arg>${DestinationLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:02.205" level="INFO">Typing text 'Dubai' into text field '(//input[@placeholder='To Destination'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:02.205" endtime="20230516 16:17:02.489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsDestinationWaitElementVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:02.490" endtime="20230516 16:17:02.527"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDestinationWaitElementVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:02.529" level="INFO">Clicking element '//strong[text()=' Dubai Intl']'.</msg>
+<status status="PASS" starttime="20230516 16:17:02.528" endtime="20230516 16:17:02.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsSwapButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:02.610" level="INFO">Clicking element 'css=div[class='swap-places waves-effect shadow']'.</msg>
+<status status="PASS" starttime="20230516 16:17:02.609" endtime="20230516 16:17:02.690"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDeparture}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:02.691" level="INFO">Clicking element '(//input[@id='departure'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:02.690" endtime="20230516 16:17:02.774"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:02.775" level="INFO">Executing JavaScript:
+window.scrollTo(0,150)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:17:02.774" endtime="20230516 16:17:02.777"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:17:03.789" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230516 16:17:02.778" endtime="20230516 16:17:03.789"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsDepartureDateTwoWayWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:03.789" endtime="20230516 16:17:03.814"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDepartureDateTwoWay}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:03.815" level="INFO">Clicking element '(//td[text()='31'])[3]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:04.096" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230516 16:17:03.842" endtime="20230516 16:17:04.097"/>
+</kw>
+<msg timestamp="20230516 16:17:04.137" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00734F20]
+	(No symbol) [0x007613A6]
+	(No symbol) [0x00759AAC]
+	(No symbol) [0x0077A2BC]
+	(No symbol) [0x00759586]
+	(No symbol) [0x0077A614]
+	(No symbol) [0x0078C482]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:03.814" endtime="20230516 16:17:04.137"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsReturnDateTwoWay}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.138" endtime="20230516 16:17:04.138"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsTravellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.139" endtime="20230516 16:17:04.139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsTravellersPlus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.140" endtime="20230516 16:17:04.140"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsTravellersPlus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.141" endtime="20230516 16:17:04.141"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsSubmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.142" endtime="20230516 16:17:04.142"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsAfterSearch}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.142" endtime="20230516 16:17:04.142"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.143" endtime="20230516 16:17:04.143"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.143" endtime="20230516 16:17:04.144"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickFlights}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.145" endtime="20230516 16:17:04.145"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsOneWay}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.145" endtime="20230516 16:17:04.145"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsInputFlyingFrom}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.146" endtime="20230516 16:17:04.146"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsInputFlyingFrom}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.146" endtime="20230516 16:17:04.147"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FlightsInputFlyingFrom}</arg>
+<arg>${SourceLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.147" endtime="20230516 16:17:04.147"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsSourceWaitElementVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.148" endtime="20230516 16:17:04.148"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsSourceWaitElementVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.148" endtime="20230516 16:17:04.148"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsInputDestination}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.149" endtime="20230516 16:17:04.149"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FlightsInputDestination}</arg>
+<arg>${DestinationLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.150" endtime="20230516 16:17:04.150"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsDestinationWaitElementVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.150" endtime="20230516 16:17:04.150"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDestinationWaitElementVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.151" endtime="20230516 16:17:04.151"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsSwapButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.151" endtime="20230516 16:17:04.151"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDeparture}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.151" endtime="20230516 16:17:04.151"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.151" endtime="20230516 16:17:04.151"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.152" endtime="20230516 16:17:04.152"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsDepartureDateTwoWay}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.152" endtime="20230516 16:17:04.152"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDepartureDateTwoWay}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.153" endtime="20230516 16:17:04.153"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsTravellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.153" endtime="20230516 16:17:04.153"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.153" endtime="20230516 16:17:04.154"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsTravellersPlus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.154" endtime="20230516 16:17:04.154"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsSubmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.154" endtime="20230516 16:17:04.155"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsAfterSearch}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.155" endtime="20230516 16:17:04.155"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.156" endtime="20230516 16:17:04.156"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:04.156" endtime="20230516 16:17:04.156"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:01.001" endtime="20230516 16:17:04.157">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00734F20]
+	(No symbol) [0x007613A6]
+	(No symbol) [0x00759AAC]
+	(No symbol) [0x0077A2BC]
+	(No symbol) [0x00759586]
+	(No symbol) [0x0077A614]
+	(No symbol) [0x0078C482]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t5" name="Validate Tours In Tablist">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230516 16:17:04.161" endtime="20230516 16:17:04.162"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BodyToursText}</arg>
+<arg>${Tours}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:04.163" level="INFO">Verifying element '(//span[@class='text'])[3]' contains exact text 'Tours'.</msg>
+<status status="PASS" starttime="20230516 16:17:04.163" endtime="20230516 16:17:04.178"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickTours}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:04.178" level="INFO">Clicking element '(//span[@class='d-none d-lg-block d-xl-block'])[3]'.</msg>
+<status status="PASS" starttime="20230516 16:17:04.178" endtime="20230516 16:17:04.224"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToursSelectCountry}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:04.225" level="INFO">Clicking element '//span[@id='select2-tours_city-container']'.</msg>
+<status status="PASS" starttime="20230516 16:17:04.225" endtime="20230516 16:17:04.328"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ToursInput}</arg>
+<arg>${SourceLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:04.331" level="INFO">Typing text 'Ahmedabad' into text field 'css=input[class='select2-search__field']'.</msg>
+<status status="PASS" starttime="20230516 16:17:04.329" endtime="20230516 16:17:04.649"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsFlagIn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:04.651" endtime="20230516 16:17:07.334"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsFlagIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:07.339" level="INFO">Clicking element 'css=i[class='flag in']'.</msg>
+<status status="PASS" starttime="20230516 16:17:07.337" endtime="20230516 16:17:07.441"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToursDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:07.442" level="INFO">Clicking element '(//input[@id='date'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:07.442" endtime="20230516 16:17:07.533"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:07.534" level="INFO">Executing JavaScript:
+window.scrollTo(0,150)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:17:07.534" endtime="20230516 16:17:07.538"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:17:08.541" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230516 16:17:07.539" endtime="20230516 16:17:08.541"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToursDepartureDate}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:18.807" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230516 16:17:18.548" endtime="20230516 16:17:18.807"/>
+</kw>
+<msg timestamp="20230516 16:17:18.809" level="FAIL">Element '(//td[text()='31'])[6]' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20230516 16:17:08.542" endtime="20230516 16:17:18.809"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToursDepartureDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.810" endtime="20230516 16:17:18.810"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToursTravellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.811" endtime="20230516 16:17:18.811"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToursTravellersPlus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.811" endtime="20230516 16:17:18.811"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToursTravellersPlus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.811" endtime="20230516 16:17:18.811"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToursSubmitButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.812" endtime="20230516 16:17:18.812"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToursWaitAfterSubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.812" endtime="20230516 16:17:18.812"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.812" endtime="20230516 16:17:18.812"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:18.813" endtime="20230516 16:17:18.813"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:04.161" endtime="20230516 16:17:18.814">Element '(//td[text()='31'])[6]' not visible after 10 seconds.</status>
+</test>
+<test id="s1-t6" name="Validate Transfers In Tablist">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BodyTransferText}</arg>
+<arg>${Transfers}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:18.818" level="INFO">Verifying element '(//span[@class='text'])[4]' contains exact text 'Transfers'.</msg>
+<status status="PASS" starttime="20230516 16:17:18.817" endtime="20230516 16:17:18.842"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickTransfer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:18.842" level="INFO">Clicking element '(//span[@class='d-none d-lg-block d-xl-block'])[4]'.</msg>
+<status status="PASS" starttime="20230516 16:17:18.842" endtime="20230516 16:17:18.884"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TransferSelectCountry}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:18.885" level="INFO">Clicking element 'css=span[id='select2-carfrom-container']'.</msg>
+<status status="PASS" starttime="20230516 16:17:18.884" endtime="20230516 16:17:19.014"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TransferInput}</arg>
+<arg>${SourceLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:19.018" level="INFO">Typing text 'Ahmedabad' into text field 'css=input[class='select2-search__field']'.</msg>
+<status status="PASS" starttime="20230516 16:17:19.017" endtime="20230516 16:17:19.193"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HotelsFlagIn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:19.194" endtime="20230516 16:17:23.124"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HotelsFlagIn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:23.125" level="INFO">Clicking element 'css=i[class='flag in']'.</msg>
+<status status="PASS" starttime="20230516 16:17:23.124" endtime="20230516 16:17:23.151"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TransferClickAfterInput}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:23.151" level="INFO">Clicking element 'css=span[id='select2-carto-container']'.</msg>
+<status status="PASS" starttime="20230516 16:17:23.151" endtime="20230516 16:17:23.212"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TransferInputTextDestination}</arg>
+<arg>${TransferDestinationLocation}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:23.214" level="INFO">Typing text 'Surat' into text field 'css=input[aria-controls='select2-carto-results']'.</msg>
+<status status="PASS" starttime="20230516 16:17:23.214" endtime="20230516 16:17:23.271"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TransferWaitUntilDestinationIsVisible}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:23.271" endtime="20230516 16:17:24.857"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TransferWaitUntilDestinationIsVisible}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:24.857" level="INFO">Clicking element '//i[@class='flag in']'.</msg>
+<status status="PASS" starttime="20230516 16:17:24.857" endtime="20230516 16:17:24.918"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TransfersDateFrom}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:24.918" level="INFO">Clicking element 'css=input[id='datefrom']'.</msg>
+<status status="PASS" starttime="20230516 16:17:24.918" endtime="20230516 16:17:24.969"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:24.970" level="INFO">Executing JavaScript:
+window.scrollTo(0,150)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:17:24.970" endtime="20230516 16:17:24.974"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:17:25.978" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230516 16:17:24.974" endtime="20230516 16:17:25.978"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FlightsDepartureDateTwoWay}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:25.979" endtime="20230516 16:17:26.009"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsDepartureDateTwoWay}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:26.010" level="INFO">Clicking element '(//td[text()='31'])[3]'.</msg>
+<status status="PASS" starttime="20230516 16:17:26.009" endtime="20230516 16:17:26.044"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsReturnDateTwoWay}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:26.045" level="INFO">Clicking element '(//td[text()='22'])[4]'.</msg>
+<status status="PASS" starttime="20230516 16:17:26.045" endtime="20230516 16:17:26.083"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FlightsTravellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:26.084" level="INFO">Clicking element '(//p[text()='Travellers '])[4]'.</msg>
+<status status="PASS" starttime="20230516 16:17:26.084" endtime="20230516 16:17:26.136"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TransfersTravellersPlus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:26.138" endtime="20230516 16:17:26.384"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TransfersTravellersPlus}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:26.385" level="INFO">Clicking element '(//i[@class='la la-plus'])[10]'.</msg>
+<status status="PASS" starttime="20230516 16:17:26.384" endtime="20230516 16:17:26.436"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TransferSubmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:26.437" level="INFO">Clicking element '(//button[@id='submit'])[3]'.</msg>
+<status status="PASS" starttime="20230516 16:17:26.436" endtime="20230516 16:17:27.958"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TransferWaitAfterSubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:27.960" endtime="20230516 16:17:28.456"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230516 16:17:28.456" endtime="20230516 16:17:30.329"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:30.330" endtime="20230516 16:17:30.354"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:18.816" endtime="20230516 16:17:30.354"/>
+</test>
+<test id="s1-t7" name="Validate Visa In Tablist">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BodyVisaText}</arg>
+<arg>${Visa}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:30.356" level="INFO">Verifying element '(//span[@class='text'])[5]' contains exact text 'Visa'.</msg>
+<status status="PASS" starttime="20230516 16:17:30.356" endtime="20230516 16:17:30.376"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ClickVisa}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:30.376" endtime="20230516 16:17:30.393"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickVisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:30.394" level="INFO">Clicking element '//span[text()='visa']'.</msg>
+<status status="PASS" starttime="20230516 16:17:30.393" endtime="20230516 16:17:30.749"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:30.751" level="INFO">Executing JavaScript:
+window.scrollTo(0,150)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:17:30.750" endtime="20230516 16:17:30.762"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:17:31.764" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230516 16:17:30.764" endtime="20230516 16:17:31.764"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VisaScroll}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:31.765" endtime="20230516 16:17:31.808"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaSelectCountrySource}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:31.809" level="INFO">Clicking element '(//span[text()='Select Country'])[1]'.</msg>
+<status status="PASS" starttime="20230516 16:17:31.809" endtime="20230516 16:17:31.883"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${VisaInputSource}</arg>
+<arg>India</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:31.884" level="INFO">Typing text 'India' into text field 'css=input[class='select2-search__field']'.</msg>
+<status status="PASS" starttime="20230516 16:17:31.884" endtime="20230516 16:17:32.005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VisaInputText}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:32.005" endtime="20230516 16:17:32.026"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaInputText}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:32.028" level="INFO">Clicking element '//li[text()='India']'.</msg>
+<status status="PASS" starttime="20230516 16:17:32.027" endtime="20230516 16:17:32.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaSelectCountryDestination}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:32.059" level="INFO">Clicking element '(//span[text()='Select Country'])'.</msg>
+<status status="PASS" starttime="20230516 16:17:32.059" endtime="20230516 16:17:32.122"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${VisaInputDestination}</arg>
+<arg>American Samoa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:32.124" level="INFO">Typing text 'American Samoa' into text field 'css=input[class='select2-search__field']'.</msg>
+<status status="PASS" starttime="20230516 16:17:32.123" endtime="20230516 16:17:32.216"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VisaInputTextDest}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:32.217" endtime="20230516 16:17:32.242"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaInputTextDest}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:32.243" level="INFO">Clicking element '//li[text()='American Samoa']'.</msg>
+<status status="PASS" starttime="20230516 16:17:32.242" endtime="20230516 16:17:32.282"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaToCountryInputDropDown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:32.283" level="INFO">Clicking element '(//div[@class='form-group'])[25]'.</msg>
+<status status="PASS" starttime="20230516 16:17:32.283" endtime="20230516 16:17:32.322"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,150)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:32.322" level="INFO">Executing JavaScript:
+window.scrollTo(0,150)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:17:32.322" endtime="20230516 16:17:32.325"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:17:33.337" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230516 16:17:32.325" endtime="20230516 16:17:33.337"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VisaDate}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:33.338" endtime="20230516 16:17:33.374"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:33.375" level="INFO">Clicking element '(//td[text()='31'])[9]'.</msg>
+<status status="PASS" starttime="20230516 16:17:33.375" endtime="20230516 16:17:33.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${VisaSubmitButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:33.417" level="INFO">Clicking element '(//button[@id='submit'])[4]'.</msg>
+<status status="PASS" starttime="20230516 16:17:33.416" endtime="20230516 16:17:34.469"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VisaWaitAfterSubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:34.470" endtime="20230516 16:17:34.964"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230516 16:17:34.965" endtime="20230516 16:17:36.896"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:36.896" endtime="20230516 16:17:36.922"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:30.355" endtime="20230516 16:17:36.923"/>
+</test>
+<test id="s1-t8" name="Validate Heading 'Top Flight Destinations'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ValidateHeading1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:36.924" endtime="20230516 16:17:36.950"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${TopFlightDestinations}</arg>
+<arg>${Heading2}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:36.951" level="INFO">Verifying element '(//h2[@class='sec__title line-height-55'])[1]' contains exact text 'Top Flight Destinations'.</msg>
+<status status="PASS" starttime="20230516 16:17:36.950" endtime="20230516 16:17:36.973"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Heading1}</var>
+<arg>${ValidateHeading1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:36.989" level="INFO">${Heading1} = Top Flight Destinations</msg>
+<status status="PASS" starttime="20230516 16:17:36.973" endtime="20230516 16:17:36.989"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Heading1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230516 16:17:36.989" level="INFO">Top Flight Destinations</msg>
+<status status="PASS" starttime="20230516 16:17:36.989" endtime="20230516 16:17:36.989"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:36.924" endtime="20230516 16:17:36.990"/>
+</test>
+<test id="s1-t9" name="Validate Heading 'Featured Hotels'">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${FeaturedTours}</arg>
+<arg>${Heading3}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:36.991" level="INFO">Verifying element 'css=h2[class='sec__title_left']' contains exact text 'Featured Tours'.</msg>
+<status status="PASS" starttime="20230516 16:17:36.991" endtime="20230516 16:17:37.007"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Heading3}</var>
+<arg>${FeaturedTours}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:37.021" level="INFO">${Heading3} = Featured Tours</msg>
+<status status="PASS" starttime="20230516 16:17:37.008" endtime="20230516 16:17:37.021"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Heading3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230516 16:17:37.021" level="INFO">Featured Tours</msg>
+<status status="PASS" starttime="20230516 16:17:37.021" endtime="20230516 16:17:37.021"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:36.990" endtime="20230516 16:17:37.021"/>
+</test>
+<test id="s1-t10" name="Validate Heading 'Featured Tours'">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${FeaturedHotels}</arg>
+<arg>${Heading4}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:37.023" level="INFO">Verifying element 'css=(//h2[@class='sec__title line-height-55'])[2]' contains exact text 'Featured Hotels'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:37.296" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230516 16:17:37.038" endtime="20230516 16:17:37.296"/>
+</kw>
+<msg timestamp="20230516 16:17:37.303" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x007383F1]
+	(No symbol) [0x00739631]
+	(No symbol) [0x007396D0]
+	(No symbol) [0x007600C0]
+	(No symbol) [0x0076069B]
+	(No symbol) [0x0078DDCC]
+	(No symbol) [0x0077A304]
+	(No symbol) [0x0078C482]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:37.022" endtime="20230516 16:17:37.304"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Heading2}</var>
+<arg>${ValidateHeading2}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:37.307" endtime="20230516 16:17:37.307"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Heading2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:37.308" endtime="20230516 16:17:37.308"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:37.022" endtime="20230516 16:17:37.308">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x007383F1]
+	(No symbol) [0x00739631]
+	(No symbol) [0x007396D0]
+	(No symbol) [0x007600C0]
+	(No symbol) [0x0076069B]
+	(No symbol) [0x0078DDCC]
+	(No symbol) [0x0077A304]
+	(No symbol) [0x0078C482]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t11" name="Validate Heading 'Book Your Transfer Today'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ValidateHeading3}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:37.319" endtime="20230516 16:17:37.348"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${BookYourTransferToday}</arg>
+<arg>${Heading5}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:37.350" level="INFO">Verifying element '(//h2[@class='sec__title line-height-55'])[3]' contains exact text 'Book Your Transfer Today'.</msg>
+<status status="PASS" starttime="20230516 16:17:37.348" endtime="20230516 16:17:37.367"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Heading4}</var>
+<arg>${ValidateHeading3}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:37.376" level="INFO">${Heading4} = Book Your Transfer Today</msg>
+<status status="PASS" starttime="20230516 16:17:37.367" endtime="20230516 16:17:37.376"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Heading4}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230516 16:17:37.377" level="INFO">Book Your Transfer Today</msg>
+<status status="PASS" starttime="20230516 16:17:37.377" endtime="20230516 16:17:37.377"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:37.315" endtime="20230516 16:17:37.377"/>
+</test>
+<test id="s1-t12" name="Validate Heading 'Latest on blogs'">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ValidateHeading4}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230516 16:17:37.378" endtime="20230516 16:17:37.392"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${LatestOnBlogs}</arg>
+<arg>${Heading6}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230516 16:17:37.393" level="INFO">Verifying element '(//h2[@class='sec__title line-height-55'])[4]' contains exact text 'Latest on blogs'.</msg>
+<status status="PASS" starttime="20230516 16:17:37.392" endtime="20230516 16:17:37.411"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Heading5}</var>
+<arg>${ValidateHeading4}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:37.426" level="INFO">${Heading5} = Latest on blogs</msg>
+<status status="PASS" starttime="20230516 16:17:37.411" endtime="20230516 16:17:37.426"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Heading5}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230516 16:17:37.426" level="INFO">Latest on blogs</msg>
+<status status="PASS" starttime="20230516 16:17:37.426" endtime="20230516 16:17:37.426"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:37.378" endtime="20230516 16:17:37.427"/>
+</test>
+<test id="s1-t13" name="Validate View More Button">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:37.429" level="INFO">Executing JavaScript:
+window.scrollTo(0,4000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230516 16:17:37.428" endtime="20230516 16:17:37.434"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230516 16:17:39.449" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230516 16:17:37.435" endtime="20230516 16:17:39.449"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ViewButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230516 16:17:39.451" level="INFO">Clicking element 'css=a[class='theme-btn waves-effect']'.</msg>
+<status status="PASS" starttime="20230516 16:17:39.450" endtime="20230516 16:17:39.625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AfterViewButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.634" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.628" endtime="20230516 16:17:39.634"/>
+</kw>
+<msg timestamp="20230516 16:17:39.634" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.641" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.626" endtime="20230516 16:17:39.641"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.642" endtime="20230516 16:17:39.642"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ViewButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.642" endtime="20230516 16:17:39.642"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:37.427" endtime="20230516 16:17:39.642">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t14" name="Validate Need Help Box">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4250)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.653" level="INFO">Executing JavaScript:
+window.scrollTo(0,4250)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.674" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.657" endtime="20230516 16:17:39.675"/>
+</kw>
+<msg timestamp="20230516 16:17:39.675" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.702" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.651" endtime="20230516 16:17:39.702"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.702" endtime="20230516 16:17:39.703"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NeedHelpBox}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.703" endtime="20230516 16:17:39.703"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NeedHelpBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.703" endtime="20230516 16:17:39.703"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AfterViewButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.704" endtime="20230516 16:17:39.704"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.704" endtime="20230516 16:17:39.704"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.704" endtime="20230516 16:17:39.704"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.649" endtime="20230516 16:17:39.706">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t15" name="Validate Subscribe To See Secret Deals Heading">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.716" level="INFO">Executing JavaScript:
+window.scrollTo(0,4500)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.723" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.719" endtime="20230516 16:17:39.723"/>
+</kw>
+<msg timestamp="20230516 16:17:39.724" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.727" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.715" endtime="20230516 16:17:39.727"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.729" endtime="20230516 16:17:39.729"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${SubscribeHeading}</arg>
+<arg>${Heading7}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.730" endtime="20230516 16:17:39.730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SubscribeHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.730" endtime="20230516 16:17:39.730"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${SectionHeading}</var>
+<arg>${SubscribeHeading}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.730" endtime="20230516 16:17:39.730"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SectionHeading}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.731" endtime="20230516 16:17:39.731"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.710" endtime="20230516 16:17:39.731">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t16" name="Validate Enter Email Address Box">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.736" level="INFO">Executing JavaScript:
+window.scrollTo(0,4500)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.742" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.737" endtime="20230516 16:17:39.742"/>
+</kw>
+<msg timestamp="20230516 16:17:39.742" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.749" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.735" endtime="20230516 16:17:39.749"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.749" endtime="20230516 16:17:39.749"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${FooterEmailText}</arg>
+<arg>${Heading8}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.749" endtime="20230516 16:17:39.749"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${email}</var>
+<arg>${FooterEmail}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.750" endtime="20230516 16:17:39.750"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.750" endtime="20230516 16:17:39.750"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${SubscribeInput}</arg>
+<arg>${Heading7}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.750" endtime="20230516 16:17:39.750"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FooterEmail}</arg>
+<arg>abc@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.751" endtime="20230516 16:17:39.751"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SubscribeButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.751" endtime="20230516 16:17:39.751"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.734" endtime="20230516 16:17:39.751">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t17" name="Validate Footer Logo">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4600)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.788" level="INFO">Executing JavaScript:
+window.scrollTo(0,4600)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.793" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.789" endtime="20230516 16:17:39.794"/>
+</kw>
+<msg timestamp="20230516 16:17:39.794" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.799" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.787" endtime="20230516 16:17:39.799"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.799" endtime="20230516 16:17:39.799"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterLogo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.801" endtime="20230516 16:17:39.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.801" endtime="20230516 16:17:39.801"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.755" endtime="20230516 16:17:39.801">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t18" name="Validate Footer Contact Us">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.815" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.808" endtime="20230516 16:17:39.815"/>
+</kw>
+<msg timestamp="20230516 16:17:39.815" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.819" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.804" endtime="20230516 16:17:39.819"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4800)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.819" endtime="20230516 16:17:39.819"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.820" endtime="20230516 16:17:39.820"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterContactUs}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.821" endtime="20230516 16:17:39.821"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WaitAfterContactUs}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.821" endtime="20230516 16:17:39.821"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.821" endtime="20230516 16:17:39.821"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.821" endtime="20230516 16:17:39.821"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.804" endtime="20230516 16:17:39.822">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t19" name="Validate Footer Company Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4800)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.825" level="INFO">Executing JavaScript:
+window.scrollTo(0,4800)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.835" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.827" endtime="20230516 16:17:39.835"/>
+</kw>
+<msg timestamp="20230516 16:17:39.835" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.838" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.825" endtime="20230516 16:17:39.838"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.839" endtime="20230516 16:17:39.839"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterCompany}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.839" endtime="20230516 16:17:39.839"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.839" endtime="20230516 16:17:39.839"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterAboutUs}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterTermsOfUse}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.840" endtime="20230516 16:17:39.840"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.841" endtime="20230516 16:17:39.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.841" endtime="20230516 16:17:39.841"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterCookiesPolicy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.841" endtime="20230516 16:17:39.841"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.841" endtime="20230516 16:17:39.841"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.842" endtime="20230516 16:17:39.842"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.842" endtime="20230516 16:17:39.842"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterPrivacyPolicy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.842" endtime="20230516 16:17:39.842"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.842" endtime="20230516 16:17:39.842"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.842" endtime="20230516 16:17:39.842"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.842" endtime="20230516 16:17:39.842"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.824" endtime="20230516 16:17:39.843">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t20" name="Validate Footer Support Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4800)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.851" level="INFO">Executing JavaScript:
+window.scrollTo(0,4800)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.856" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.852" endtime="20230516 16:17:39.856"/>
+</kw>
+<msg timestamp="20230516 16:17:39.856" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.861" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.851" endtime="20230516 16:17:39.862"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.863" endtime="20230516 16:17:39.864"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterSupport}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.864" endtime="20230516 16:17:39.864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.864" endtime="20230516 16:17:39.864"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.865" endtime="20230516 16:17:39.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.865" endtime="20230516 16:17:39.865"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Footersupplier}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.866" endtime="20230516 16:17:39.866"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.866" endtime="20230516 16:17:39.866"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.866" endtime="20230516 16:17:39.866"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.867" endtime="20230516 16:17:39.867"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterFAQ}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.867" endtime="20230516 16:17:39.867"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.867" endtime="20230516 16:17:39.867"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.868" endtime="20230516 16:17:39.868"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.868" endtime="20230516 16:17:39.868"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterBookingTips}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.868" endtime="20230516 16:17:39.868"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.868" endtime="20230516 16:17:39.868"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.868" endtime="20230516 16:17:39.868"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.868" endtime="20230516 16:17:39.868"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterHowToBook}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.869" endtime="20230516 16:17:39.869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.869" endtime="20230516 16:17:39.869"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.869" endtime="20230516 16:17:39.869"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.869" endtime="20230516 16:17:39.869"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.850" endtime="20230516 16:17:39.870">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t21" name="Validate Footer Services Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4800)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.873" level="INFO">Executing JavaScript:
+window.scrollTo(0,4800)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.881" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.874" endtime="20230516 16:17:39.881"/>
+</kw>
+<msg timestamp="20230516 16:17:39.881" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.885" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.873" endtime="20230516 16:17:39.885"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.886" endtime="20230516 16:17:39.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=a[href='services']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.886" endtime="20230516 16:17:39.886"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.886" endtime="20230516 16:17:39.886"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.887" endtime="20230516 16:17:39.887"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Main</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.887" endtime="20230516 16:17:39.887"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4850)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.887" endtime="20230516 16:17:39.887"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.887" endtime="20230516 16:17:39.887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FooterFileAClaim}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.887" endtime="20230516 16:17:39.887"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterFileAClaim}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.887" endtime="20230516 16:17:39.887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.888" endtime="20230516 16:17:39.888"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.888" endtime="20230516 16:17:39.888"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.888" endtime="20230516 16:17:39.888"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4850)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.888" endtime="20230516 16:17:39.888"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.888" endtime="20230516 16:17:39.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FooterOffers}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.888" endtime="20230516 16:17:39.888"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterOffers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OfferHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4850)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SignupSupplier}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignupSupplier}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.889" endtime="20230516 16:17:39.889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SupplierSignupHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,4850)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FooterCareers}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterCareers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CompanyHeadings}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.890" endtime="20230516 16:17:39.890"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.891" endtime="20230516 16:17:39.891"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.891" endtime="20230516 16:17:39.891"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.872" endtime="20230516 16:17:39.891">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t22" name="Validate Footer Facebook Icon">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230516 16:17:39.899" level="INFO">Executing JavaScript:
+window.scrollTo(0,5000)
+Without any arguments.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.903" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.900" endtime="20230516 16:17:39.903"/>
+</kw>
+<msg timestamp="20230516 16:17:39.903" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.906" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.898" endtime="20230516 16:17:39.906"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.906" endtime="20230516 16:17:39.906"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterFacebook}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.906" endtime="20230516 16:17:39.906"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.906" endtime="20230516 16:17:39.906"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FacebookWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.907" endtime="20230516 16:17:39.907"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FacebookWait}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.907" endtime="20230516 16:17:39.907"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BackFromFacebook}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.907" endtime="20230516 16:17:39.907"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.907" endtime="20230516 16:17:39.907"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.897" endtime="20230516 16:17:39.907">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t23" name="Validate Footer Twitter Icon">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.920" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.916" endtime="20230516 16:17:39.920"/>
+</kw>
+<msg timestamp="20230516 16:17:39.920" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.924" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.912" endtime="20230516 16:17:39.924"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.924" endtime="20230516 16:17:39.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.925" endtime="20230516 16:17:39.925"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterTwitter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.925" endtime="20230516 16:17:39.925"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.925" endtime="20230516 16:17:39.925"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TwitterWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.925" endtime="20230516 16:17:39.925"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.925" endtime="20230516 16:17:39.925"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.910" endtime="20230516 16:17:39.925">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t24" name="Validate Footer Youtube Icon">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.938" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.933" endtime="20230516 16:17:39.938"/>
+</kw>
+<msg timestamp="20230516 16:17:39.938" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.942" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.930" endtime="20230516 16:17:39.942"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.943" endtime="20230516 16:17:39.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.943" endtime="20230516 16:17:39.943"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterYoutbe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.943" endtime="20230516 16:17:39.943"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.943" endtime="20230516 16:17:39.943"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${YoutubeWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.944" endtime="20230516 16:17:39.944"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.944" endtime="20230516 16:17:39.944"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.929" endtime="20230516 16:17:39.945">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t25" name="Validate Footer Whatsapp Icon">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.956" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.953" endtime="20230516 16:17:39.956"/>
+</kw>
+<msg timestamp="20230516 16:17:39.956" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.959" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.951" endtime="20230516 16:17:39.959"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.960" endtime="20230516 16:17:39.960"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.961" endtime="20230516 16:17:39.961"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterWhatsapp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.961" endtime="20230516 16:17:39.961"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.961" endtime="20230516 16:17:39.961"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WhatsappWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.961" endtime="20230516 16:17:39.961"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.961" endtime="20230516 16:17:39.961"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.950" endtime="20230516 16:17:39.962">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t26" name="Validate Footer Instagram Icon">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.973" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.969" endtime="20230516 16:17:39.974"/>
+</kw>
+<msg timestamp="20230516 16:17:39.974" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.976" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.967" endtime="20230516 16:17:39.976"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.976" endtime="20230516 16:17:39.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.976" endtime="20230516 16:17:39.976"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterInstagram}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.977" endtime="20230516 16:17:39.977"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.977" endtime="20230516 16:17:39.977"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${InstagramWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.977" endtime="20230516 16:17:39.977"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.978" endtime="20230516 16:17:39.978"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.967" endtime="20230516 16:17:39.978">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t27" name="Validate Footer PHPTRAVELS href">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:39.989" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.985" endtime="20230516 16:17:39.990"/>
+</kw>
+<msg timestamp="20230516 16:17:39.990" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.994" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:39.983" endtime="20230516 16:17:39.994"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FooterPHPtravels}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.995" endtime="20230516 16:17:39.995"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.996" endtime="20230516 16:17:39.996"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.996" endtime="20230516 16:17:39.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PhptravelsPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.997" endtime="20230516 16:17:39.997"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.997" endtime="20230516 16:17:39.997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpWait}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.998" endtime="20230516 16:17:39.998"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:39.998" endtime="20230516 16:17:39.998"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:39.983" endtime="20230516 16:17:39.998">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<test id="s1-t28" name="Validate Top-Up Button">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230516 16:17:40.037" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:40.032" endtime="20230516 16:17:40.038"/>
+</kw>
+<msg timestamp="20230516 16:17:40.038" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:40.042" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<status status="FAIL" starttime="20230516 16:17:40.003" endtime="20230516 16:17:40.042"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,5000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:40.043" endtime="20230516 16:17:40.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:40.043" endtime="20230516 16:17:40.043"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Top-Up}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:40.043" endtime="20230516 16:17:40.043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PhpMainHeading}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230516 16:17:40.043" endtime="20230516 16:17:40.043"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:17:40.002" endtime="20230516 16:17:40.044">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x00726F0B]
+	(No symbol) [0x007275CA]
+	(No symbol) [0x00727568]
+	(No symbol) [0x0071C0BA]
+	(No symbol) [0x0071C917]
+	(No symbol) [0x00782AB7]
+	(No symbol) [0x0077A283]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</status>
+</test>
+<kw name="Close Browser Session" library="testCase_common_keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230516 16:17:40.053" endtime="20230516 16:17:42.145"/>
+</kw>
+<status status="PASS" starttime="20230516 16:17:40.052" endtime="20230516 16:17:42.146"/>
+</kw>
+<status status="FAIL" starttime="20230516 16:16:46.697" endtime="20230516 16:17:42.146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="19" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="19" skip="0" id="s1" name="Testcase Phptravels">Testcase Phptravels</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230516 16:17:39.634" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.675" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.724" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.742" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.794" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.815" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.835" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.856" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.881" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.903" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.920" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.938" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.956" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.974" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:39.990" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+<msg timestamp="20230516 16:17:40.038" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.93)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00898893+48451]
+	(No symbol) [0x0082B8A1]
+	(No symbol) [0x00735058]
+	(No symbol) [0x0071D073]
+	(No symbol) [0x0077DEBB]
+	(No symbol) [0x0078BFD3]
+	(No symbol) [0x0077A0B6]
+	(No symbol) [0x00757E08]
+	(No symbol) [0x00758F2D]
+	GetHandleVerifier [0x00AF8E3A+2540266]
+	GetHandleVerifier [0x00B38959+2801161]
+	GetHandleVerifier [0x00B3295C+2776588]
+	GetHandleVerifier [0x00922280+612144]
+	(No symbol) [0x00834F6C]
+	(No symbol) [0x008311D8]
+	(No symbol) [0x008312BB]
+	(No symbol) [0x00824857]
+	BaseThreadInitThunk [0x76D10099+25]
+	RtlGetAppContainerNamedObjectPath [0x777F7B6E+286]
+	RtlGetAppContainerNamedObjectPath [0x777F7B3E+238]
+</msg>
+</errors>
+</robot>
